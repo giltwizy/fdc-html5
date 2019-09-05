@@ -1,0 +1,145 @@
+html, body {
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /********************/
+    /* board background */
+    /********************/
+    background: #333;
+}
+
+html, body, div, ul, li, canvas { margin: 0; padding: 0; }
+
+.hide { display: none; }
+
+.clear { clear: both; }
+
+/*== Jigsaw puzzle ==*/
+div#canvas-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+canvas#canvas, canvas#buffer, canvas#image-preview {
+    position: absolute;
+    top: 45px;
+    left: 0;
+}
+
+canvas#canvas { z-index: 100; }
+
+.loading  #canvas-wrap { background: url(../images/loader.gif) no-repeat center; }
+.loading  canvas { visibility: hidden; }
+
+canvas#buffer { z-index: 70; }
+
+canvas#image-preview.show {
+    left: 50%;
+    opacity: .5;
+    z-index: 40;
+}
+
+/*== Options bar ==*/
+div#game-options ul {
+    margin: 0 auto;
+}
+div#game-options  {
+    background: #fff;
+    z-index: 500;
+    top: 0;
+    left: -20px;
+    position: fixed;
+    border-bottom: 1px solid #000;
+    padding: 5px 10px 5px 30px;
+    width: 100%;
+    height: 32px;
+    -moz-box-shadow: 0 0 5px black;
+    -webkit-box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px black;
+}
+
+div#game-options ul li { 
+    float: left;
+    list-style: none;
+    line-height: 25px;
+}
+
+div#game-options ul li b {
+    margin: 0 10px;
+}
+
+/*== Clock ==*/
+#clock {
+    width: 60px;
+    display: block;
+    text-align: center;
+}
+
+/*== Select ==*/
+div#game-options div.styled-select select {
+    outline: none;
+    background: transparent;
+    width: 125px;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    height: 28px;
+    -webkit-appearance: none;
+}
+
+div#game-options div.styled-select {
+    width: 100px;
+    height: 28px;
+    margin-right: 10px;
+    overflow: hidden;
+    background: url(../images/arrow.png) right no-repeat #f3f3f3;
+    border: 1px solid #333;
+}
+
+/*== Share buttons ==*/
+#share-twitter, #share-facebook {
+    text-indent: -10000px;
+    width: 32px;
+    height: 32px;
+    display: block;
+    cursor:pointer;
+}
+
+/*== Crear puzzle ==*/
+#image-error { color: red; margin: 0 10px; display: none; }
+#dnd { display: none }
+
+#game-options #create {
+    display: none;
+    right: 25px;
+    position: absolute;
+}
+
+#game-options #create .add {
+    background: url(../images/plus.png)  10px 6px no-repeat #f3f3f3;
+    padding-left: 30px;
+}
+/*== Modal window ==*/
+
+div#congrat { text-align: center; }
+
+div#help {
+    font-size: 15px;
+}
+
+div#help ul { margin-left: 10px; }
+
+/*== mobile ==*/
+@media screen and (max-width: 960px) {
+    div#game-options { left: -30px; }
+    #clock { width: 50px; margin-left: }
+    #SHOW_EDGE, #SHOW_MIDDLE, #SHOW_ALL,#SHOW_FILEPICKER { display: none; }
+}
+
+@media screen and (max-width: 479px) {
+    #SHOW_HELP, #clock { display: none; }
+    #JIGSAW_SHUFFLE { margin-left: 15px; }
+    #SHOW_PREVIEW { margin-right: 10px; }
+}
+
