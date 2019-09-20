@@ -15,7 +15,7 @@ html, body, div, ul, li, canvas { margin: 0; padding: 0; }
 
 .clear { clear: both; }
 
-/*== Jigsaw puzzle ==*/
+/*== puzzle ==*/
 div#canvas-wrap {
     width: 100%;
     height: 100%;
@@ -43,9 +43,10 @@ canvas#image-preview.show {
 /*== Options bar ==*/
 div#game-options ul {
     margin: 0 auto;
+    background: blue;
 }
 div#game-options  {
-    background: #fff;
+    background: #4267b2;
     z-index: 500;
     top: 0;
     left: -20px;

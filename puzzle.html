@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Jigsaw Puzzle</title>
+    <title>Puzzle</title>
     <!--[if lt IE 9]><script type="text/javascript" src="js/bin/flashcanvas.js"></script><![endif]-->
     <link rel="stylesheet" href="css/modal.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<!-- JIGSAW CANVAS -->
+<!-- PUZZLE CANVAS -->
 <div id="canvas-wrap">
     <canvas id="canvas"></canvas>
     <canvas class="hide" id="image"></canvas>
@@ -23,12 +23,12 @@
 <div id="game-options">
 <ul>
     <li><b id="clock" class="button">00:00:00</b></li>
-    <li><a href="jigsaw-puzzle_2.html#" id="SHOW_EDGE" class="button left" title="Show edge pieces only">Border</a></li>
-    <li><a href="jigsaw-puzzle_2.html#" id="SHOW_MIDDLE" class="button middle" title="Show middle pieces only">Middle</a></li>
-    <li><a href="jigsaw-puzzle_2.html#" id="SHOW_ALL" class="button right" title="Show all pieces">All</a></li>
-    <li><a href="jigsaw-puzzle_2.html#" id="JIGSAW_SHUFFLE" class="button left" title="Shuffle">Shuffle</a></li>
-    <li><a href="jigsaw-puzzle_2.html#" id="SHOW_PREVIEW" class="button middle" title="Preview">Preview</a></li>
-    <li><a href="jigsaw-puzzle_2.html#" id="SHOW_HELP" class="button help right" title="Help">Help</a></li>
+    <li><a href="puzzle.html#" id="SHOW_EDGE" class="button left" title="Show edge pieces only">Border</a></li>
+    <li><a href="puzzle.html#" id="SHOW_MIDDLE" class="button middle" title="Show middle pieces only">Middle</a></li>
+    <li><a href="puzzle.html#" id="SHOW_ALL" class="button right" title="Show all pieces">All</a></li>
+    <li><a href="puzzle.html#" id="JIGSAW_SHUFFLE" class="button left" title="Shuffle">Shuffle</a></li>
+    <li><a href="puzzle.html#" id="SHOW_PREVIEW" class="button middle" title="Preview">Preview</a></li>
+    <li><a href="puzzle.html#" id="SHOW_HELP" class="button help right" title="Help">Help</a></li>
     <!-- INSERT CUSTOM BUTTONS -->
     
     <!-- END INSERT CUSTOM BUTTONS -->
@@ -39,7 +39,7 @@
         </div>
     </li>
     <!-- Insert custom buttons here -->
-    <li id="create"><a href="jigsaw-puzzle_2.html#" class="button add" id="SHOW_FILEPICKER" title="Create puzzle" >Create puzzle</a></li>
+    <li id="create"><a href="puzzle.html#" class="button add" id="SHOW_FILEPICKER" title="Create puzzle" >Create puzzle</a></li>
 </ul>
 <br class="clear"/>
 </div>
@@ -48,7 +48,7 @@
 <div class="hide" id="overlay"></div>
 <div id="modal-window" class="hide">
     <div id="modal-window-msg"></div>
-    <a href="jigsaw-puzzle_2.html#" id="modal-window-close" class="button">Close</a>
+    <a href="puzzle.html#" id="modal-window-close" class="button">Close</a>
 </div>
 
 <!-- CONGRATULATION -->
@@ -56,7 +56,7 @@
     <h1>Congratulations!</h1>
     <h2>You solved it in</h2>
     <h3><span id="time"></span></h3>
-    <form method="post" class="hide" action="jigsaw-puzzle_2.html" target="save-score" onsubmit="jigsaw.UI.close_lightbox();">
+    <form method="post" class="hide" action="puzzle.html" target="save-score" onsubmit="jigsaw.UI.close_lightbox();">
         <label>
         Your Name: <input type="text" name="name" />
         </label>
